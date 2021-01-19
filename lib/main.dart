@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hiva/arthitecture/provider/splash_provider.dart';
 import 'package:hiva/pages/intro/SplashPage.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +11,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiProvider(providers: [
+      ChangeNotifierProvider.value(value: SplashProvider()),
+
+    ],
+    child: MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -28,6 +34,6 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: SplashPage(),
-    );
+    ),);
   }
 }
