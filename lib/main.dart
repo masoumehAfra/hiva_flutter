@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hiva/arthitecture/provider/splash_provider.dart';
+import 'package:hiva/pages/intro/IntroPage.dart';
 import 'package:hiva/pages/intro/SplashPage.dart';
 import 'package:provider/provider.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashPage(),
+      home: IntroPage(),
     ),);
   }
 }
